@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAGE & SOMA | Премиальная клиника соматического массажа и велнеса</title>
+  <meta name="description" content="Премиальная клиника массажа и телесной терапии SAGE & SOMA. Глубокотканные техники, лимфодренаж, натуропатия и авторские ритуалы в атмосфере безмятежности.">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) & Plus Jakarta Sans (Modern 2026 Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FAF8F5',
+              100: '#F6F3EC',
+              200: '#EDE8DE',
+              300: '#E1D9CA',
+              400: '#D2C5B0',
+              DEFAULT: '#F8F6F0',
+            },
+            sage: {
+              50: '#F3F5F2',
+              100: '#E4E9E2',
+              200: '#CAD4C7',
+              300: '#A9B8A5',
+              400: '#859880',
+              500: '#6B7E66',
+              600: '#566652',
+              700: '#445141',
+              800: '#384236',
+              900: '#2A3229',
+              DEFAULT: '#5E7059',
+            },
+            olive: {
+              soft: '#8B9474',
+              muted: '#626B52',
+              deep: '#3D4433',
+            },
+            charcoal: {
+              900: '#1C1F1B',
+              800: '#2A2F29',
+              700: '#3D433C',
+              600: '#5A6359',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-cream-100 text-charcoal-800 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
+
+  <!-- Top Notification Bar -->
+  <aside aria-label="Announcement" class="bg-sage-900 text-cream-100 text-xs tracking-widest uppercase py-2.5 px-4 text-center border-b border-sage-800 flex items-center justify-center gap-3">
+    <span class="inline-block w-2 h-2 rounded-full bg-sage-300 animate-pulse"></span>
+    <span>Сезон восстановления нервной системы • Открыта запись на октябрь и ноябрь • Беверли-Хиллз & онлайн-консультации</span>
+  </aside>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-cream-200/80 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-serif text-2xl lg:text-3xl tracking-[0.18em] text-sage-900 font-medium group-hover:text-sage-600 transition-colors">SAGE & SOMA</span>
+        <span class="text-[10px] tracking-[0.3em] uppercase text-charcoal-600 font-light -mt-1">Somatic Sanctuary & Holistic Spa</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm tracking-wider uppercase font-medium text-charcoal-700">
+        <a href="#about" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">О клинике</a>
+        <a href="#rituals" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Ритуалы</a>
+        <a href="#founder" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Основатель</a>
+        <a href="#sanctuary" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Пространство</a>
+        <a href="#reviews" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Отзывы</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center space-x-4">
+        <a href="tel:+13105550198" class="text-xs uppercase tracking-widest text-charcoal-600 hover:text-sage-700 font-medium hidden lg:inline-block">
+          +1 (310) 555-0198
+        </a>
+        <button onclick="openBookingModal()" class="px-6 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.2em] font-medium shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+          Записаться
+        </button>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-charcoal-800 focus:outline-none" aria-label="Открыть меню">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="burgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 py-6 space-y-4 text-center">
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">О клинике</a>
+      <a href="#rituals" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Ритуалы</a>
+      <a href="#founder" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Основатель</a>
+      <a href="#sanctuary" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Пространство</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Отзывы</a>
+      <div class="pt-4 border-t border-cream-200">
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full py-3 rounded-full bg-sage-700 text-cream-50 text-xs uppercase tracking-widest font-medium">
+          Записаться на сеанс
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 lg:pt-16 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium tracking-wider uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-sage-500"></span>
+            Natural Skincare • Deep Massage • Somatic Healing
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-charcoal-900 leading-[1.1] tracking-tight">
+            Искусство прикосновения, <br class="hidden sm:inline">
+            <span class="italic font-normal text-sage-700">возвращающее</span> к гармонии
+          </h1>
+
+          <p class="text-charcoal-600 text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Осознанная телесная терапия, миофасциальный релиз и глубокий лимфодренаж в пространстве естественного умиротворения. Мы исцеляем накопившуюся усталость через авторский симбиоз мануальных практик и чистейших масел дикого шалфея.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.25em] font-medium shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+              Забронировать визит
+            </button>
+            <a href="#rituals" class="w-full sm:w-auto px-8 py-4 rounded-full border border-sage-300 hover:border-sage-600 text-sage-900 text-xs uppercase tracking-[0.25em] font-medium transition-all text-center hover:bg-sage-50">
+              Выбрать методику
+            </a>
+          </div>
+
+          <!-- Proof Metrics -->
+          <div class="pt-8 border-t border-cream-200/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">4.98</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Оценка гостей (450+ отзывов)</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">100%</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Органические масла холодного отжима</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">12+</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Лет доказательной практики</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image Showcase -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-lg lg:max-w-none">
+            <!-- Decorative Backing Frame -->
+            <div class="absolute -inset-4 rounded-3xl bg-sage-200/50 -rotate-1 -z-10 blur-sm"></div>
+            
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream-50 aspect-[16/10] sm:aspect-[16/10] group">
+              <img 
+                src="assets/images/hero.jpg" 
+                alt="Интерьер массажной клиники SAGE & SOMA" 
+                class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Badge: Signature Experience -->
+            <div class="absolute -bottom-6 -left-4 sm:left-6 bg-cream-50/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-cream-200 max-w-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center text-sage-700 flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-sage-600 font-semibold block">Signature Ritual</span>
+                <span class="font-serif text-base text-charcoal-900 font-medium">Somatic Nervous Reset</span>
+                <span class="text-xs text-charcoal-600 block">75 минут глубокой перезагрузки</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Organic Oils -->
+            <div class="hidden sm:flex absolute -top-5 -right-4 bg-sage-800 text-cream-50 px-4 py-3 rounded-xl shadow-lg items-center gap-2 text-xs tracking-wider">
+              <svg class="w-4 h-4 text-sage-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>100% Eco-Certified Oils</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Philosophy Pillars -->
+  <section class="py-12 bg-cream-200/50 border-y border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">01</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Индивидуальная глубина</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Диагностика постуры и мышечного тонуса перед каждым сеансом без шаблонных подходов.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">02</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Ботаническая чистота</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Эфирные масла дикого шалфея, ладана и бергамота прямого холодного отжима без синтетических отдушек.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">03</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Сенсорная тишина</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Индивидуальные сьюты с акустической звукоизоляцией, подогреваемым льном и терапевтическим светом.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">04</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Соматическая интеграция</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Особое внимание вегетативной нервной системе — снятие глубинных телесных блоков и хронического стресса.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section with Founder Profile -->
+  <section id="about" class="py-24 lg:py-32 bg-cream-50 relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Философия пространства</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 mt-3 font-light">
+          Клиника, где тело находит свой природный покой
+        </h2>
+        <div class="w-12 h-[1px] bg-sage-400 mx-auto mt-6"></div>
+      </div>
+
+      <!-- About Story & Founder Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" id="founder">
+        
+        <!-- Founder Image (Generated Attractive Director) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Frame with Cream Sage border -->
+            <div class="absolute -top-4 -left-4 w-full h-full border border-sage-300 rounded-2xl -z-10"></div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-sage-100 group relative">
+              <img 
+                src="assets/images/founder.jpg" 
+                alt="София Мерсер — Основатель и ведущий соматический терапевт SAGE & SOMA" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-cream-50">
+                <p class="font-serif text-xl sm:text-2xl font-medium tracking-wide">София Мерсер (Sofia Mercer)</p>
+                <p class="text-xs uppercase tracking-widest text-sage-200 mt-1">Основатель клиники • Магистр соматической терапии</p>
+              </div>
+            </div>
+
+            <!-- Credentials Pill -->
+            <div class="absolute -bottom-4 -right-4 bg-sage-700 text-cream-50 px-5 py-3 rounded-xl shadow-lg border border-sage-600 hidden sm:block">
+              <p class="text-[10px] tracking-widest uppercase text-sage-200">Лицензия & Практика</p>
+              <p class="text-xs font-medium">LMT, ABMP Certified • San Francisco & Beverly Hills</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder Story & Clinic Philosophy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-cream-200 text-sage-800 text-xs uppercase tracking-widest font-semibold">
+            Слово создателя
+          </div>
+
+          <blockquote class="font-serif text-2xl sm:text-3xl text-charcoal-900 font-normal italic leading-snug">
+            «Тело помнит каждую эмоцию, переутомление и бешеный темп нашей жизни. Я основала SAGE & SOMA, чтобы вернуть терапевтическому массажу его истинную силу — не просто снять напряжение в мышцах, а дать вашей нервной системе глубокое ощущение безопасности и возрождения.»
+          </blockquote>
+
+          <div class="space-y-4 text-charcoal-600 text-sm sm:text-base font-light leading-relaxed">
+            <p>
+              Мы открыли двери <strong class="text-charcoal-900 font-medium">SAGE & SOMA</strong> как ответ на урбанистическое истощение. Здесь нет клинического холода или поверхностных процедур. Каждая деталь нашего пространства — от приглушенных оливковых и кремовых тонов штукатурки до аромата дикого горного шалфея — настраивает биоритмы на замедление.
+            </p>
+            <p>
+              Наша команда состоит исключительно из специалистов с высшим медицинским или остеопатическим бэкграундом и международной сертификацией. Мы объединили глубокотканный миофасциальный релиз, авторскую мануальную лепку лица, краниосакральные техники и целебные растительные экстракты.
+            </p>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-cream-200">
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Авторский метод Somatic Sculpt™</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Чистые масла без парабенов и силиконов</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Акустический sound-bath протокол 432 Гц</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Столы из массива тика с подогревом льна</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal('София Мерсер — Индивидуальная консультация')" class="inline-flex items-center space-x-3 text-xs uppercase tracking-widest text-sage-800 font-semibold hover:text-sage-600 transition-colors">
+              <span>Записаться на сеанс к Софии Мерсер</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Treatments & Rituals Section -->
+  <section id="rituals" class="py-24 lg:py-32 bg-cream-100 border-t border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Терапевтическое меню</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 mt-2 font-light">
+            Авторские соматические ритуалы
+          </h2>
+        </div>
+        <p class="text-charcoal-600 text-sm max-w-md font-light">
+          Каждая программа подбирается с учетом состояния вашего мышечного корсета, уровня кортизола и индивидуальных пожеланий.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Ritual Card 1: Deep Somatic Release -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>75 / 90 мин</span>
+              <span class="text-sage-700 font-semibold">Хит клиники</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Deep Somatic Release
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Глубокотканная проработка & Миофасциальный релиз
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Интенсивное послойное воздействие на глубокие мышечные фасции, триггерные зоны и зажимы в шейно-воротниковом отделе. Восстанавливает естественную амплитуду движений и освобождает от хронической боли.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$185 / $220</div>
+            </div>
+            <button onclick="openBookingModal('Deep Somatic Release (75 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 2: Sculpt & Flow Lymphatic -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 мин</span>
+              <span class="text-sage-700 font-semibold">Detox & Glow</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Sculpt & Flow Lymphatic
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Лимфодренажный контуринг тела и лица
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Мягкая волнообразная мануальная техника активирует лимфоток, снимает отечность тканей, улучшает оксигенацию и подтягивает контуры. Включает деликатную скульптурирующую проработку скул и овала лица.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$230</div>
+            </div>
+            <button onclick="openBookingModal('Sculpt & Flow Lymphatic (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 3: Botanical Warm Stone Journey -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 мин</span>
+              <span class="text-sage-700 font-semibold">Thermal Therapy</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Sage & Warm Stone Journey
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Горячие вулканические базальты & Дикий шалфей
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Глубокое прогревание спазмированных мышечных слоев гладкими базальтовыми камнями, насыщенными эликсиром белого калифорнийского шалфея, органического сандала и масла жожоба.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$245</div>
+            </div>
+            <button onclick="openBookingModal('Sage & Warm Stone Journey (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 4: Craniosacral & Nervous Reset -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>60 мин</span>
+              <span class="text-sage-700 font-semibold">Deep Zen</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Craniosacral & Vagus Reset
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Краниосакральная биодинамика & Баланс блуждающего нерва
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Невероятно мягкая, микромануальная техника нормализации циркуляции ликвора и работы парасимпатической системы. Мгновенно снимает бессонницу, мигрени, тревожность и выгорание.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$175</div>
+            </div>
+            <button onclick="openBookingModal('Craniosacral & Vagus Reset (60 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 5: Pre-Natal Gentle Nurture -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>60 / 75 мин</span>
+              <span class="text-sage-700 font-semibold">Для будущих мам</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Pre-Natal Gentle Nurture
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Бережный массаж для 2 и 3 триместров
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Специальная подушечная система и деликатные разгрузочные техники для крестца, поясницы и ног. Улучшает сон, снижает отечность и дарит полное спокойствие маме и малышу.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$180</div>
+            </div>
+            <button onclick="openBookingModal('Pre-Natal Gentle Nurture (60 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 6: Sacred Couple Sanctuary -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 мин</span>
+              <span class="text-sage-700 font-semibold">Для двоих</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Duo Sacred Sanctuary
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Парный спа-ритуал в приватном сьюте
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Синхронный соматический массаж в приватном сьюте с аромадиффузией шалфея, звуковой тибетской ванной и дегустацией органического церемониального матча или травяного сбора.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Стоимость</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$390</div>
+            </div>
+            <button onclick="openBookingModal('Duo Sacred Sanctuary (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Выбрать
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sanctuary Atmosphere / Sensory Experience -->
+  <section id="sanctuary" class="py-24 bg-sage-900 text-cream-50 relative overflow-hidden">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#FAF8F5_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.3em] text-sage-300 font-medium">Сенсорная архитектура</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-cream-50 leading-tight">
+            Каждое ощущение <br><span class="italic text-sage-300">продумано</span> до миллиметра
+          </h2>
+          <p class="text-cream-200/80 text-sm sm:text-base font-light leading-relaxed">
+            В 2026 году ведущие велнес-пространства США ушли от шумных спа-комплексов к интимной биофильной архитектуре. Мы используем натуральный необработанный травертин, мягкую глиняную штукатурку, ткани из 100% некрашеного льна и акустику, нейтрализующую городской шум.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Терморегулируемые массажные ложа из тика</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Особая анатомическая форма стола снижает нагрузку на позвоночник на 40% во время сеанса.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Кастомные ботанические купажи</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Масла создаются малыми партиями в Калифорнии специально для нашей клиники.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Мягкий свет циркадных ритмов</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Спектр освещения автоматически подстраивается под время суток, помогая выработке мелатонина.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal()" class="px-8 py-3.5 rounded-full bg-cream-100 hover:bg-white text-sage-900 text-xs uppercase tracking-widest font-semibold transition-all">
+              Почувствовать атмосферу
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden bg-sage-800 aspect-square border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">22°C</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Идеальная температура в сьютах</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden bg-sage-800/80 aspect-[4/5] border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">432 Hz</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Терапевтическая частота звука</span>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden bg-sage-800/80 aspect-[4/5] border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">100%</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Органический лен и хлопок</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden bg-sage-800 aspect-square border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">0%</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Искусственных красителей и отдушек</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client Reviews / Social Proof -->
+  <section id="reviews" class="py-24 bg-cream-50 border-t border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Впечатления гостей</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-900 mt-2 font-light">
+          Истории исцеления и доверия
+        </h2>
+        <div class="w-12 h-[1px] bg-sage-400 mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              «После нескольких месяцев изнурительной работы в венчурном фонде я не могла спать больше 4 часов. Сеанс у Софии сотворил чудо — впервые за полгода я проснулась без зажима в челюсти и шее.»
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              АВ
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Анна Васильева</p>
+              <p class="text-[11px] text-charcoal-500">Ритуал Deep Somatic Release</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              «Лимфодренажный скульптурирующий массаж перед съемками — это мастхэв. Лицо моментально подтягивается, уходит вся утренняя пастозность, а кожа буквально светится изнутри от натуральных масел.»
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              КС
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Кристина Смирнова</p>
+              <p class="text-[11px] text-charcoal-500">Sculpt & Flow Lymphatic</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              «Эстетика в каждой детали: от запаха белого шалфея при входе до нежнейшего органического льна. Никакой спешки, полная приватность и руки мастеров высочайшего уровня.»
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              МД
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Михаил Давыдов</p>
+              <p class="text-[11px] text-charcoal-500">Sage & Warm Stone Journey</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-cream-100 border-t border-cream-200">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Детали визита</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-900 mt-2 font-light">
+          Часто задаваемые вопросы
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(1)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">Нужна ли специальная подготовка к массажу?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-1">+</span>
+          </div>
+          <div id="faq-content-1" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            Мы рекомендуем не принимать тяжелую пищу за 1,5 часа до сеанса и пить достаточное количество чистой воды. В клинике вам предложат теплый травяной сбор и персональную консультацию с терапевтом.
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(2)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">Какие масла вы используете и подходят ли они для чувствительной кожи?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-2">+</span>
+          </div>
+          <div id="faq-content-2" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            Мы используем 100% гипоаллергенные органические базы холодного отжима (жожоба, сладкий миндаль, масло виноградной косточки) с добавлением терапевтических эфирных масел дикого шалфея, сандала и вербены. Перед началом мы всегда проводим тест на чувствительность.
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(3)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">Можно ли оформить подарочный сертификат?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-3">+</span>
+          </div>
+          <div id="faq-content-3" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            Да, у нас есть как элегантные сертификаты ручной работы из хлопковой бумаги в конвертах цвета Sage с восковой печатью, так и моментальные цифровые сертификаты для отправки в подарок.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Booking CTA Banner -->
+  <section class="py-20 bg-sage-800 text-cream-50 relative">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-6">
+      <span class="text-xs uppercase tracking-[0.3em] text-sage-300 font-medium">Ваше время восстановления</span>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light">
+        Подарите своему телу долгожданный покой
+      </h2>
+      <p class="text-cream-200/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
+        Забронируйте персональный ритуал онлайн за 1 минуту. Наш консьерж свяжется для уточнения всех персональных предпочтений.
+      </p>
+      <div class="pt-4">
+        <button onclick="openBookingModal()" class="px-10 py-4 rounded-full bg-cream-50 hover:bg-white text-sage-900 text-xs uppercase tracking-[0.25em] font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+          Забронировать ритуал онлайн
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-cream-50 border-t border-cream-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <div class="space-y-4">
+          <a href="#" class="font-serif text-2xl tracking-[0.15em] text-sage-900 font-medium">SAGE & SOMA</a>
+          <p class="text-xs text-charcoal-600 leading-relaxed font-light">
+            Премиальное пространство соматического массажа, телесной терапии и органического велнеса в оттенках Cream & Sage.
+          </p>
+          <div class="flex space-x-3 text-sage-700 pt-2">
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Instagram">IG</a>
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Telegram">TG</a>
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Pinterest">PI</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Навигация</h4>
+          <ul class="space-y-2 text-xs text-charcoal-600">
+            <li><a href="#about" class="hover:text-sage-700 transition-colors">О клинике</a></li>
+            <li><a href="#rituals" class="hover:text-sage-700 transition-colors">Меню ритуалов</a></li>
+            <li><a href="#founder" class="hover:text-sage-700 transition-colors">Основатель София Мерсер</a></li>
+            <li><a href="#sanctuary" class="hover:text-sage-700 transition-colors">Интерьер и атмосфера</a></li>
+            <li><a href="#reviews" class="hover:text-sage-700 transition-colors">Отзывы клиентов</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Локация & Часы</h4>
+          <div class="space-y-2 text-xs text-charcoal-600 leading-relaxed font-light">
+            <p><strong class="font-medium text-charcoal-800">Адрес:</strong> 9450 Wilshire Blvd, Beverly Hills, CA 90212</p>
+            <p><strong class="font-medium text-charcoal-800">Часы работы:</strong> Ежедневно с 09:00 до 21:00</p>
+            <p><strong class="font-medium text-charcoal-800">Контакт:</strong> +1 (310) 555-0198</p>
+            <p><strong class="font-medium text-charcoal-800">Email:</strong> concierge@sage-soma.wellness</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Рассылка о велнесе</h4>
+          <p class="text-xs text-charcoal-600 leading-relaxed font-light mb-3">
+            Получайте авторские соматические практики и закрытые приглашения на закрытые спа-вечера.
+          </p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" required placeholder="Ваш e-mail" class="w-full px-4 py-2.5 rounded-lg bg-cream-100 border border-cream-300 text-xs focus:outline-none focus:border-sage-500">
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-wider font-medium transition-colors">
+              Подписаться
+            </button>
+          </form>
+          <div id="newsletterSuccess" class="hidden text-[11px] text-sage-700 mt-2">
+            ✓ Спасибо! Вы подписаны на закрытый велнес-вестник.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-cream-200/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-charcoal-500 gap-4">
+        <div>© 2026 SAGE & SOMA Clinique. Все права защищены. Cream Sage Holistic Wellness.</div>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-sage-700">Конфиденциальность</a>
+          <a href="#" class="hover:text-sage-700">Условия сервиса</a>
+          <a href="#" class="hover:text-sage-700">Противопоказания</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-charcoal-900/60 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="bg-cream-50 rounded-2xl max-w-lg w-full p-6 sm:p-8 border border-cream-300 shadow-2xl relative my-8 transform transition-all">
+      
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-charcoal-500 hover:text-charcoal-900 text-2xl font-light leading-none">
+        &times;
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <span class="text-[10px] uppercase tracking-widest text-sage-700 font-semibold">Онлайн бронирование</span>
+        <h3 class="font-serif text-2xl text-charcoal-900 font-medium mt-1">Запись на соматический сеанс</h3>
+        <p class="text-xs text-charcoal-600 mt-1">Выберите подходящий ритуал и желаемое время визита</p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="bookingForm" onsubmit="submitBooking(event)" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Выберите ритуал</label>
+          <select id="modalTreatmentSelect" required class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+            <option value="Deep Somatic Release (75 мин)">Deep Somatic Release — 75 мин ($185)</option>
+            <option value="Sculpt & Flow Lymphatic (90 мин)">Sculpt & Flow Lymphatic — 90 мин ($230)</option>
+            <option value="Sage & Warm Stone Journey (90 мин)">Sage & Warm Stone Journey — 90 мин ($245)</option>
+            <option value="Craniosacral & Vagus Reset (60 мин)">Craniosacral & Vagus Reset — 60 мин ($175)</option>
+            <option value="Pre-Natal Gentle Nurture (60 мин)">Pre-Natal Gentle Nurture — 60 мин ($180)</option>
+            <option value="Duo Sacred Sanctuary (90 мин)">Duo Sacred Sanctuary — 90 мин ($390)</option>
+            <option value="София Мерсер — Индивидуальная консультация">Персональный сеанс у Софии Мерсер ($280)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Специалист</label>
+          <select id="modalTherapistSelect" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+            <option value="Любой свободный топ-специалист">Любой свободный ведущий специалист</option>
+            <option value="София Мерсер (Основатель клиники)">София Мерсер (Sofia Mercer, Founder)</option>
+            <option value="Майя Линд (Старший остеопатический массажист)">Майя Линд (Senior Osteopathic Therapist)</option>
+            <option value="Дэвид Кэмпбелл (Специалист по глубоким тканям)">Дэвид Кэмпбелл (Deep Tissue Specialist)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Дата</label>
+            <input type="date" required id="bookingDate" class="w-full px-3 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Время</label>
+            <select class="w-full px-3 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+              <option>10:00</option>
+              <option>11:30</option>
+              <option>13:30</option>
+              <option>15:00</option>
+              <option>17:00</option>
+              <option>19:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Ваше имя</label>
+          <input type="text" required placeholder="Например, Анна" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Номер телефона или WhatsApp / Telegram</label>
+          <input type="tel" required placeholder="+1 (___) ___-____ или Telegram" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Особые пожелания или зоны фокуса</label>
+          <textarea rows="2" placeholder="Например: акцент на шейном отделе, предпочтение слабого аромата..." class="w-full px-4 py-2 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.2em] font-medium shadow-md transition-all mt-2">
+          Подтвердить запись
+        </button>
+
+      </form>
+
+      <!-- Success Confirmation view (Hidden by default) -->
+      <div id="bookingConfirmation" class="hidden text-center py-8 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-sage-100 text-sage-700 mx-auto flex items-center justify-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h4 class="font-serif text-2xl text-charcoal-900">Ваш сеанс забронирован</h4>
+        <p class="text-xs text-charcoal-600 max-w-xs mx-auto leading-relaxed">
+          Благодарим вас! Консьерж клиники SAGE & SOMA отправит подтверждение и рекомендации по подготовке в течение 10 минут.
+        </p>
+        <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-full bg-sage-700 text-cream-50 text-xs uppercase tracking-widest mt-4">
+          Закрыть
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
