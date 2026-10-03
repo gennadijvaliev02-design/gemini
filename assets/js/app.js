@@ -76,6 +76,15 @@ function submitBooking(event) {
   event.preventDefault();
   const form = document.getElementById('bookingForm');
   const confirmation = document.getElementById('bookingConfirmation');
+  const nameInput = form.querySelector('input[type="text"]');
+  const treatmentSelect = document.getElementById('modalTreatmentSelect');
+  const clientName = nameInput ? nameInput.value.trim() : '';
+
+  const confirmMsg = confirmation.querySelector('p');
+  if (confirmMsg && clientName) {
+    const treatment = treatmentSelect ? treatmentSelect.value : 'соматический сеанс';
+    confirmMsg.innerHTML = `Благодарим вас, <strong>${clientName}</strong>! Ваша заявка на <em>«${treatment}»</em> принята. Консьерж клиники SAGE & SOMA отправит подтверждение и рекомендации по подготовке в течение 10 минут.`;
+  }
 
   form.classList.add('hidden');
   confirmation.classList.remove('hidden');
