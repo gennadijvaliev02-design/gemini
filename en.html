@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAGE & SOMA | Somatic Massage & Wellness</title>
+  <meta name="description" content="SAGE & SOMA massage and wellness website concept. Explore signature rituals, the sanctuary and an interactive booking demo.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gennadijvaliev02-design.github.io/gemini/en.html">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="SAGE & SOMA Clinique">
+  <meta property="og:url" content="https://gennadijvaliev02-design.github.io/gemini/en.html">
+  <meta property="og:title" content="SAGE & SOMA | Somatic Massage & Wellness">
+  <meta property="og:description" content="Signature massage and wellness rituals in a calm sanctuary. Explore the interactive booking demo.">
+  <meta property="og:image" content="https://gennadijvaliev02-design.github.io/gemini/assets/images/og-sagesoma.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SAGE & SOMA Clinique">
+  <meta name="twitter:description" content="SAGE & SOMA massage and wellness website concept with an interactive booking demo.">
+  <meta name="twitter:image" content="https://gennadijvaliev02-design.github.io/gemini/assets/images/og-sagesoma.jpg">
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Luxury Serif) & Plus Jakarta Sans (Modern 2026 Clean Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FAF8F5',
+              100: '#F6F3EC',
+              200: '#EDE8DE',
+              300: '#E1D9CA',
+              400: '#D2C5B0',
+              DEFAULT: '#F8F6F0',
+            },
+            sage: {
+              50: '#F3F5F2',
+              100: '#E4E9E2',
+              200: '#CAD4C7',
+              300: '#A9B8A5',
+              400: '#859880',
+              500: '#6B7E66',
+              600: '#566652',
+              700: '#445141',
+              800: '#384236',
+              900: '#2A3229',
+              DEFAULT: '#5E7059',
+            },
+            olive: {
+              soft: '#8B9474',
+              muted: '#626B52',
+              deep: '#3D4433',
+            },
+            charcoal: {
+              900: '#1C1F1B',
+              800: '#2A2F29',
+              700: '#3D433C',
+              600: '#5A6359',
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+<style>
+    .language-switch { display:flex; align-items:center; gap:7px; flex-shrink:0; margin-left:12px; color:#445141; font:600 12px/1.4 "Plus Jakarta Sans",sans-serif; }
+    .language-switch a { padding:7px 2px; text-decoration:none; opacity:.6; }
+    .language-switch a[aria-current="page"] { opacity:1; border-bottom:1px solid currentColor; }
+    .language-switch a:hover { opacity:1; }
+    .language-switch a:focus-visible { outline:2px solid #445141; outline-offset:3px; }
+    @media(min-width:768px) and (max-width:1199px) { #mainHeader nav:not(.language-switch) { gap:12px; font-size:11px; } #mainHeader nav:not(.language-switch) > * { margin-left:0; } }
+    @media(max-width:420px) { #mainHeader > div:first-child { padding-left:16px; padding-right:16px; } #mainHeader a > span:first-child { font-size:21px; } #mainHeader a > span:nth-child(2) { font-size:8px; letter-spacing:.15em; } .language-switch { margin-left:auto; margin-right:8px; } }
+  </style>
+  <link rel="alternate" hreflang="ru" href="https://gennadijvaliev02-design.github.io/gemini/">
+  <link rel="alternate" hreflang="en" href="https://gennadijvaliev02-design.github.io/gemini/en.html">
+</head>
+<body class="bg-cream-100 text-charcoal-800 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
+
+  <!-- Top Notification Bar -->
+  <aside aria-label="Announcement" class="bg-sage-900 text-cream-100 text-xs tracking-widest uppercase py-2.5 px-4 text-center border-b border-sage-800 flex items-center justify-center gap-3">
+    <span class="inline-block w-2 h-2 rounded-full bg-sage-300 animate-pulse"></span>
+    <span>A season of renewal • October and November appointments • Beverly Hills & online consultations</span>
+  </aside>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-40 bg-cream-50/90 backdrop-blur-md border-b border-cream-200/80 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-serif text-2xl lg:text-3xl tracking-[0.18em] text-sage-900 font-medium group-hover:text-sage-600 transition-colors">SAGE & SOMA</span>
+        <span class="text-[10px] tracking-[0.3em] uppercase text-charcoal-600 font-light -mt-1">Somatic Sanctuary & Holistic Spa</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm tracking-wider uppercase font-medium text-charcoal-700">
+        <a href="#about" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">About</a>
+        <a href="#rituals" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Rituals</a>
+        <a href="#founder" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Founder</a>
+        <a href="#sanctuary" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Sanctuary</a>
+        <a href="#reviews" class="hover:text-sage-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1.5px] after:bg-sage-500 hover:after:w-full after:transition-all">Reviews</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center space-x-4">
+        <a href="tel:+13105550198" class="text-xs uppercase tracking-widest text-charcoal-600 hover:text-sage-700 font-medium hidden lg:inline-block">
+          +1 (310) 555-0198
+        </a>
+        <button onclick="openBookingModal()" class="px-6 py-3 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.2em] font-medium shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5">
+          Book a visit
+        </button>
+      </div>
+
+<nav class="language-switch" aria-label="Language">
+        <a href="index.html" lang="ru" hreflang="ru">RU</a>
+        <span aria-hidden="true">/</span>
+        <a href="en.html" lang="en" hreflang="en" aria-current="page">EN</a>
+      </nav>
+            <!-- Mobile Menu Toggle Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-charcoal-800 focus:outline-none" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="burgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-cream-50 border-b border-cream-200 px-6 py-6 space-y-4 text-center">
+      <a href="#about" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">About</a>
+      <a href="#rituals" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Rituals</a>
+      <a href="#founder" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Founder</a>
+      <a href="#sanctuary" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Sanctuary</a>
+      <a href="#reviews" onclick="toggleMobileMenu()" class="block text-sm uppercase tracking-wider text-charcoal-800 py-2">Reviews</a>
+      <div class="pt-4 border-t border-cream-200">
+        <button onclick="toggleMobileMenu(); openBookingModal();" class="w-full py-3 rounded-full bg-sage-700 text-cream-50 text-xs uppercase tracking-widest font-medium">
+          Book a session
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 lg:pt-16 lg:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text Content -->
+        <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium tracking-wider uppercase">
+            <span class="w-1.5 h-1.5 rounded-full bg-sage-500"></span>
+            Natural Skincare • Deep Massage • Somatic Healing
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-charcoal-900 leading-[1.1] tracking-tight">
+            The art of touch, <br class="hidden sm:inline">
+            <span class="italic font-normal text-sage-700">bringing you</span> back to balance
+          </h1>
+
+          <p class="text-charcoal-600 text-base sm:text-lg font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Thoughtful bodywork, myofascial release and lymphatic massage in a naturally calming space. Discover a considered blend of hands-on techniques and botanical oils, designed around time for yourself.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-4 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.25em] font-medium shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+              Book your visit
+            </button>
+            <a href="#rituals" class="w-full sm:w-auto px-8 py-4 rounded-full border border-sage-300 hover:border-sage-600 text-sage-900 text-xs uppercase tracking-[0.25em] font-medium transition-all text-center hover:bg-sage-50">
+              Explore rituals
+            </a>
+          </div>
+
+          <!-- Proof Metrics -->
+          <div class="pt-8 border-t border-cream-200/80 grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">4.98</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Guest rating (450+ reviews)</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">100%</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Organic cold-pressed oils</div>
+            </div>
+            <div>
+              <div class="font-serif text-3xl font-medium text-sage-800">12+</div>
+              <div class="text-[11px] uppercase tracking-wider text-charcoal-600 mt-1">Years of practice</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Image Showcase -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-lg lg:max-w-none">
+            <!-- Decorative Backing Frame -->
+            <div class="absolute -inset-4 rounded-3xl bg-sage-200/50 -rotate-1 -z-10 blur-sm"></div>
+            
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-cream-50 aspect-[16/10] sm:aspect-[16/10] group">
+              <img 
+                src="assets/images/hero.jpg" 
+                alt="SAGE & SOMA massage sanctuary interior" 
+                class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/40 via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Badge: Signature Experience -->
+            <div class="absolute -bottom-6 -left-4 sm:left-6 bg-cream-50/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-cream-200 max-w-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center text-sage-700 flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <div>
+                <span class="text-[10px] uppercase tracking-widest text-sage-600 font-semibold block">Signature Ritual</span>
+                <span class="font-serif text-base text-charcoal-900 font-medium">Somatic Nervous Reset</span>
+                <span class="text-xs text-charcoal-600 block">75 minutes to unwind</span>
+              </div>
+            </div>
+
+            <!-- Floating Badge: Organic Oils -->
+            <div class="hidden sm:flex absolute -top-5 -right-4 bg-sage-800 text-cream-50 px-4 py-3 rounded-xl shadow-lg items-center gap-2 text-xs tracking-wider">
+              <svg class="w-4 h-4 text-sage-300" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span>100% Eco-Certified Oils</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Philosophy Pillars -->
+  <section class="py-12 bg-cream-200/50 border-y border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">01</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Personal attention</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Posture and muscle-tone assessment before every session, with an individual approach.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">02</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Botanical purity</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Cold-pressed wild sage, frankincense and bergamot oils, without synthetic fragrances.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">03</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Sensory stillness</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">Private suites with acoustic insulation, warmed linen and gentle lighting.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-4">
+          <span class="font-serif text-2xl text-sage-600 font-light">04</span>
+          <div>
+            <h3 class="text-sm font-semibold tracking-wider uppercase text-charcoal-900">Somatic integration</h3>
+            <p class="text-xs text-charcoal-600 mt-1 leading-relaxed">A mindful approach to body tension and the experience of everyday stress.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section with Founder Profile -->
+  <section id="about" class="py-24 lg:py-32 bg-cream-50 relative">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-24">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Our philosophy</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 mt-3 font-light">
+          A sanctuary where your body can find its natural calm
+        </h2>
+        <div class="w-12 h-[1px] bg-sage-400 mx-auto mt-6"></div>
+      </div>
+
+      <!-- About Story & Founder Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center" id="founder">
+        
+        <!-- Founder Image (Generated Attractive Director) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <!-- Decorative Frame with Cream Sage border -->
+            <div class="absolute -top-4 -left-4 w-full h-full border border-sage-300 rounded-2xl -z-10"></div>
+            
+            <div class="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] bg-sage-100 group relative">
+              <img 
+                src="assets/images/founder.jpg" 
+                alt="Sofia Mercer — founder and lead somatic therapist, SAGE & SOMA concept" 
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900/60 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+              
+              <div class="absolute bottom-6 left-6 right-6 text-cream-50">
+                <p class="font-serif text-xl sm:text-2xl font-medium tracking-wide">Sofia Mercer</p>
+                <p class="text-xs uppercase tracking-widest text-sage-200 mt-1">Founder • Master of Somatic Therapy</p>
+              </div>
+            </div>
+
+            <!-- Credentials Pill -->
+            <div class="absolute -bottom-4 -right-4 bg-sage-700 text-cream-50 px-5 py-3 rounded-xl shadow-lg border border-sage-600 hidden sm:block">
+              <p class="text-[10px] tracking-widest uppercase text-sage-200">Qualifications & practice</p>
+              <p class="text-xs font-medium">LMT, ABMP Certified • San Francisco & Beverly Hills</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder Story & Clinic Philosophy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-block px-3.5 py-1 rounded-full bg-cream-200 text-sage-800 text-xs uppercase tracking-widest font-semibold">
+            A word from the founder
+          </div>
+
+          <blockquote class="font-serif text-2xl sm:text-3xl text-charcoal-900 font-normal italic leading-snug">
+            “The body carries our emotions, exhaustion and the pace of everyday life. I founded SAGE & SOMA to create space for thoughtful therapeutic touch — not simply a pause for tired muscles, but a sense of safety and renewal.”
+          </blockquote>
+
+          <div class="space-y-4 text-charcoal-600 text-sm sm:text-base font-light leading-relaxed">
+            <p>
+              We opened <strong class="text-charcoal-900 font-medium">SAGE & SOMA</strong> in response to the exhaustion of urban life. Every detail — from soft olive and cream finishes to the scent of wild mountain sage — invites you to slow down.
+            </p>
+            <p>
+              Our concept brings together medical and osteopathic perspectives, deep-tissue myofascial release, facial sculpting, craniosacral techniques and botanical extracts.
+            </p>
+          </div>
+
+          <!-- Feature Bullets -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-cream-200">
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Signature Somatic Sculpt™ method</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Oils without parabens or silicones</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">432 Hz sound-bath experience</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              <span class="text-xs sm:text-sm font-medium text-charcoal-800">Solid teak tables with warmed linen</span>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal('София Мерсер — Индивидуальная консультация')" class="inline-flex items-center space-x-3 text-xs uppercase tracking-widest text-sage-800 font-semibold hover:text-sage-600 transition-colors">
+              <span>Book a session with Sofia Mercer</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Treatments & Rituals Section -->
+  <section id="rituals" class="py-24 lg:py-32 bg-cream-100 border-t border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Treatment menu</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 mt-2 font-light">
+            Signature somatic rituals
+          </h2>
+        </div>
+        <p class="text-charcoal-600 text-sm max-w-md font-light">
+          Each programme is tailored to your comfort, areas of tension and individual preferences.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Ritual Card 1: Deep Somatic Release -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>75 / 90 min</span>
+              <span class="text-sage-700 font-semibold">Signature treatment</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Deep Somatic Release
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Deep tissue & myofascial release
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Focused, layered bodywork for deep muscle tension, trigger points and the neck and shoulders, with attention to comfort and natural movement.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$185 / $220</div>
+            </div>
+            <button onclick="openBookingModal('Deep Somatic Release (75 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 2: Sculpt & Flow Lymphatic -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 min</span>
+              <span class="text-sage-700 font-semibold">Detox & Glow</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Sculpt & Flow Lymphatic
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Lymphatic body & facial sculpting
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Gentle, flowing techniques for a lighter, refreshed feeling, including delicate sculpting work around the cheekbones and facial contours.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$230</div>
+            </div>
+            <button onclick="openBookingModal('Sculpt & Flow Lymphatic (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 3: Botanical Warm Stone Journey -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 min</span>
+              <span class="text-sage-700 font-semibold">Thermal Therapy</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Sage & Warm Stone Journey
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Warm volcanic stones & wild sage
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Smooth, warmed basalt stones paired with white California sage, organic sandalwood and jojoba oils for a deeply comforting ritual.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$245</div>
+            </div>
+            <button onclick="openBookingModal('Sage & Warm Stone Journey (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 4: Craniosacral & Nervous Reset -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>60 min</span>
+              <span class="text-sage-700 font-semibold">Deep Zen</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Craniosacral & Vagus Reset
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Craniosacral bodywork & relaxation
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              A very gentle, hands-on ritual that creates space to rest, release tension and reconnect with a calmer pace.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$175</div>
+            </div>
+            <button onclick="openBookingModal('Craniosacral & Vagus Reset (60 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 5: Pre-Natal Gentle Nurture -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>60 / 75 min</span>
+              <span class="text-sage-700 font-semibold">For expectant mothers</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Pre-Natal Gentle Nurture
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              Gentle care in the second & third trimesters
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Supportive cushions and gentle techniques for the lower back, hips and legs, with comfort and individual needs at the centre of the session.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$180</div>
+            </div>
+            <button onclick="openBookingModal('Pre-Natal Gentle Nurture (60 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <!-- Ritual Card 6: Sacred Couple Sanctuary -->
+        <div class="bg-cream-50 p-8 rounded-2xl border border-cream-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:border-sage-300">
+          <div>
+            <div class="flex items-center justify-between text-xs text-charcoal-500 uppercase tracking-widest mb-4">
+              <span>90 min</span>
+              <span class="text-sage-700 font-semibold">For two</span>
+            </div>
+            <h3 class="font-serif text-2xl text-charcoal-900 font-medium group-hover:text-sage-700 transition-colors">
+              Duo Sacred Sanctuary
+            </h3>
+            <p class="text-xs uppercase tracking-wider text-sage-600 mt-1 mb-4">
+              A shared spa ritual in a private suite
+            </p>
+            <p class="text-xs sm:text-sm text-charcoal-600 font-light leading-relaxed mb-6">
+              Synchronized massage in a private suite with sage aromatherapy, a Tibetan sound bath and ceremonial matcha or herbal tea.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-charcoal-500">Price</span>
+              <div class="font-serif text-xl font-medium text-sage-900">$390</div>
+            </div>
+            <button onclick="openBookingModal('Duo Sacred Sanctuary (90 мин)')" class="px-5 py-2.5 rounded-full bg-sage-100 hover:bg-sage-700 hover:text-cream-50 text-sage-800 text-xs uppercase tracking-wider font-medium transition-all">
+              Select
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sanctuary Atmosphere / Sensory Experience -->
+  <section id="sanctuary" class="py-24 bg-sage-900 text-cream-50 relative overflow-hidden">
+    <!-- Subtle Background Pattern -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#FAF8F5_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs uppercase tracking-[0.3em] text-sage-300 font-medium">Sensory architecture</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-cream-50 leading-tight">
+            Every sensation <br><span class="italic text-sage-300">considered</span> down to the last detail
+          </h2>
+          <p class="text-cream-200/80 text-sm sm:text-base font-light leading-relaxed">
+            An intimate space inspired by biophilic design: natural travertine, soft clay finishes, undyed linen and acoustics that soften the noise of the city.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Temperature-controlled teak massage tables</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Anatomically considered tables and supportive positioning for comfort throughout your session.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Bespoke botanical blends</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Small-batch oils blended in California for the sanctuary.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 rounded-full bg-sage-800 border border-sage-700 flex items-center justify-center text-sage-300 text-xs flex-shrink-0 mt-0.5">✦</div>
+              <div>
+                <h4 class="text-sm font-medium text-cream-100">Gentle, changing light</h4>
+                <p class="text-xs text-cream-300/70 mt-0.5">Lighting that shifts with the time of day to create a restful atmosphere.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <button onclick="openBookingModal()" class="px-8 py-3.5 rounded-full bg-cream-100 hover:bg-white text-sage-900 text-xs uppercase tracking-widest font-semibold transition-all">
+              Experience the sanctuary
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden bg-sage-800 aspect-square border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">22°C</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Suite temperature</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden bg-sage-800/80 aspect-[4/5] border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">432 Hz</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Sound-bath frequency</span>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden bg-sage-800/80 aspect-[4/5] border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">100%</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Organic linen & cotton</span>
+            </div>
+            <div class="rounded-2xl overflow-hidden bg-sage-800 aspect-square border border-sage-700/60 p-6 flex flex-col justify-end">
+              <span class="text-3xl font-serif text-sage-200">0%</span>
+              <span class="text-xs uppercase tracking-wider text-cream-300/80 mt-1">Artificial colours & fragrances</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client Reviews / Social Proof -->
+  <section id="reviews" class="py-24 bg-cream-50 border-t border-cream-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Guest experiences</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-900 mt-2 font-light">
+          Stories of care and connection
+        </h2>
+        <div class="w-12 h-[1px] bg-sage-400 mx-auto mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              “After months of demanding work at a venture fund, I was struggling to switch off. Sofia’s session gave me a much-needed pause and a feeling of ease in my neck and jaw.”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              AV
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Anna Vasilyeva</p>
+              <p class="text-[11px] text-charcoal-500">Deep Somatic Release ritual</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              “Facial and lymphatic massage before a shoot is my favourite ritual. The gentle techniques and botanical oils leave me feeling refreshed and ready for the day.”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              KS
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Kristina Smirnova</p>
+              <p class="text-[11px] text-charcoal-500">Sculpt & Flow Lymphatic</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="bg-cream-100 p-8 rounded-2xl border border-cream-200 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-sage-600 space-x-1">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <p class="font-serif text-lg text-charcoal-900 italic">
+              “Care in every detail: the scent of white sage, the softness of organic linen, complete privacy and no rush. A beautiful place to take time for yourself.”
+            </p>
+          </div>
+          <div class="pt-6 border-t border-cream-200/80 mt-6 flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-full bg-sage-200 flex items-center justify-center font-medium text-sage-800 text-xs">
+              MD
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-charcoal-900">Mikhail Davydov</p>
+              <p class="text-[11px] text-charcoal-500">Sage & Warm Stone Journey</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-cream-100 border-t border-cream-200">
+    <div class="max-w-4xl mx-auto px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-[0.3em] text-sage-700 font-medium">Your visit</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-charcoal-900 mt-2 font-light">
+          Frequently asked questions
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Accordion 1 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(1)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">How should I prepare for a massage?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-1">+</span>
+          </div>
+          <div id="faq-content-1" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            We recommend avoiding a heavy meal for around 90 minutes before your session and staying hydrated. Your visit begins with herbal tea and a conversation about your preferences.
+          </div>
+        </div>
+
+        <!-- Accordion 2 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(2)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">Which oils do you use, and what if my skin is sensitive?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-2">+</span>
+          </div>
+          <div id="faq-content-2" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            Our concept uses organic cold-pressed base oils such as jojoba, sweet almond and grapeseed, paired with botanical essential oils. Please discuss sensitivities and allergies with your therapist before treatment.
+          </div>
+        </div>
+
+        <!-- Accordion 3 -->
+        <div class="bg-cream-50 rounded-xl border border-cream-200 p-5 cursor-pointer transition-all" onclick="toggleAccordion(3)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm font-medium text-charcoal-900">Can I arrange a gift certificate?</h4>
+            <span class="text-sage-700 font-serif text-xl" id="faq-icon-3">+</span>
+          </div>
+          <div id="faq-content-3" class="hidden text-xs sm:text-sm text-charcoal-600 mt-3 font-light leading-relaxed">
+            The concept includes both cotton-paper gift certificates in sage envelopes and digital certificates that can be sent as a gift.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Booking CTA Banner -->
+  <section class="py-20 bg-sage-800 text-cream-50 relative">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-6">
+      <span class="text-xs uppercase tracking-[0.3em] text-sage-300 font-medium">Time to restore</span>
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-light">
+        Give yourself a moment of stillness
+      </h2>
+      <p class="text-cream-200/80 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
+        Explore the booking experience and choose your preferred ritual, therapist and time.
+      </p>
+      <div class="pt-4">
+        <button onclick="openBookingModal()" class="px-10 py-4 rounded-full bg-cream-50 hover:bg-white text-sage-900 text-xs uppercase tracking-[0.25em] font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+          Book a ritual online
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-cream-50 border-t border-cream-200 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <div class="space-y-4">
+          <a href="#" class="font-serif text-2xl tracking-[0.15em] text-sage-900 font-medium">SAGE & SOMA</a>
+          <p class="text-xs text-charcoal-600 leading-relaxed font-light">
+            A premium somatic massage, bodywork and organic wellness concept in Cream & Sage.
+          </p>
+          <div class="flex space-x-3 text-sage-700 pt-2">
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Instagram">IG</a>
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Telegram">TG</a>
+            <a href="#" class="w-8 h-8 rounded-full bg-cream-200 flex items-center justify-center hover:bg-sage-600 hover:text-white transition-colors" aria-label="Pinterest">PI</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-xs text-charcoal-600">
+            <li><a href="#about" class="hover:text-sage-700 transition-colors">About</a></li>
+            <li><a href="#rituals" class="hover:text-sage-700 transition-colors">Ritual menu</a></li>
+            <li><a href="#founder" class="hover:text-sage-700 transition-colors">Founder Sofia Mercer</a></li>
+            <li><a href="#sanctuary" class="hover:text-sage-700 transition-colors">Interiors & atmosphere</a></li>
+            <li><a href="#reviews" class="hover:text-sage-700 transition-colors">Guest reviews</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Location & hours</h4>
+          <div class="space-y-2 text-xs text-charcoal-600 leading-relaxed font-light">
+            <p><strong class="font-medium text-charcoal-800">Address:</strong> 9450 Wilshire Blvd, Beverly Hills, CA 90212</p>
+            <p><strong class="font-medium text-charcoal-800">Hours:</strong> Daily, 9 am–9 pm</p>
+            <p><strong class="font-medium text-charcoal-800">Contact:</strong> +1 (310) 555-0198</p>
+            <p><strong class="font-medium text-charcoal-800">Email:</strong> concierge@sage-soma.wellness</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-charcoal-900 font-semibold mb-4">Wellness newsletter</h4>
+          <p class="text-xs text-charcoal-600 leading-relaxed font-light mb-3">
+            Discover somatic practices and invitations to private wellness evenings.
+          </p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" required placeholder="Your email" class="w-full px-4 py-2.5 rounded-lg bg-cream-100 border border-cream-300 text-xs focus:outline-none focus:border-sage-500">
+            <button type="submit" class="w-full py-2.5 rounded-lg bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-wider font-medium transition-colors">
+              Subscribe
+            </button>
+          </form>
+          <div id="newsletterSuccess" class="hidden text-[11px] text-sage-700 mt-2">
+            ✓ Thank you! This demo shows how a newsletter subscription could work.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-cream-200/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-charcoal-500 gap-4">
+        <div>© 2026 SAGE & SOMA Clinique. Website concept by Valiev Company. Cream Sage Holistic Wellness.</div>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-sage-700">Privacy</a>
+          <a href="#" class="hover:text-sage-700">Terms of service</a>
+          <a href="#" class="hover:text-sage-700">Treatment suitability</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-charcoal-900/60 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="bg-cream-50 rounded-2xl max-w-lg w-full p-6 sm:p-8 border border-cream-300 shadow-2xl relative my-8 transform transition-all">
+      
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-charcoal-500 hover:text-charcoal-900 text-2xl font-light leading-none">
+        &times;
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-6">
+        <span class="text-[10px] uppercase tracking-widest text-sage-700 font-semibold">Online booking</span>
+        <h3 class="font-serif text-2xl text-charcoal-900 font-medium mt-1">Book a somatic session</h3>
+        <p class="text-xs text-charcoal-600 mt-1">Choose your ritual and preferred time</p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="bookingForm" onsubmit="submitBooking(event)" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Choose a ritual</label>
+          <select id="modalTreatmentSelect" required class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+            <option value="Deep Somatic Release (75 мин)">Deep Somatic Release — 75 min ($185)</option>
+            <option value="Sculpt & Flow Lymphatic (90 мин)">Sculpt & Flow Lymphatic — 90 min ($230)</option>
+            <option value="Sage & Warm Stone Journey (90 мин)">Sage & Warm Stone Journey — 90 min ($245)</option>
+            <option value="Craniosacral & Vagus Reset (60 мин)">Craniosacral & Vagus Reset — 60 min ($175)</option>
+            <option value="Pre-Natal Gentle Nurture (60 мин)">Pre-Natal Gentle Nurture — 60 min ($180)</option>
+            <option value="Duo Sacred Sanctuary (90 мин)">Duo Sacred Sanctuary — 90 min ($390)</option>
+            <option value="София Мерсер — Индивидуальная консультация">Private session with Sofia Mercer ($280)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Therapist</label>
+          <select id="modalTherapistSelect" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+            <option value="Любой свободный топ-специалист">Any available lead therapist</option>
+            <option value="София Мерсер (Основатель клиники)">Sofia Mercer (Founder)</option>
+            <option value="Майя Линд (Старший остеопатический массажист)">Maya Lind (Senior Osteopathic Therapist)</option>
+            <option value="Дэвид Кэмпбелл (Специалист по глубоким тканям)">David Campbell (Deep Tissue Specialist)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Date</label>
+            <input type="date" required id="bookingDate" class="w-full px-3 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Time</label>
+            <select class="w-full px-3 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+              <option>10:00</option>
+              <option>11:30</option>
+              <option>13:30</option>
+              <option>15:00</option>
+              <option>17:00</option>
+              <option>19:00</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Your name</label>
+          <input type="text" required placeholder="For example, Anna" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Phone number or WhatsApp / Telegram</label>
+          <input type="tel" required placeholder="+1 (___) ___-____ or Telegram" class="w-full px-4 py-2.5 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600">
+        </div>
+
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-charcoal-700 font-medium mb-1.5">Preferences or areas of focus</label>
+          <textarea rows="2" placeholder="For example: focus on neck tension, preference for a subtle scent..." class="w-full px-4 py-2 rounded-xl bg-cream-100 border border-cream-300 text-xs text-charcoal-900 focus:outline-none focus:border-sage-600"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-sage-700 hover:bg-sage-800 text-cream-50 text-xs uppercase tracking-[0.2em] font-medium shadow-md transition-all mt-2">
+          Preview booking
+        </button>
+
+      </form>
+
+      <!-- Success Confirmation view (Hidden by default) -->
+      <div id="bookingConfirmation" class="hidden text-center py-8 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-sage-100 text-sage-700 mx-auto flex items-center justify-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h4 class="font-serif text-2xl text-charcoal-900">Your demo booking is ready</h4>
+        <p class="text-xs text-charcoal-600 max-w-xs mx-auto leading-relaxed">
+          Thank you for trying the booking experience. This is a website concept: no appointment has been booked and no details have been sent.
+        </p>
+        <button onclick="closeBookingModal()" class="px-6 py-2.5 rounded-full bg-sage-700 text-cream-50 text-xs uppercase tracking-widest mt-4">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+<script src="assets/js/en.js"></script>
+</body>
+</html>
+
