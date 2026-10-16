@@ -81,6 +81,17 @@
   </script>
 
   <link rel="stylesheet" href="assets/css/style.css">
+<style>
+    .language-switch { display:flex; align-items:center; gap:7px; flex-shrink:0; margin-left:12px; color:#445141; font:600 12px/1.4 "Plus Jakarta Sans",sans-serif; }
+    .language-switch a { padding:7px 2px; text-decoration:none; opacity:.6; }
+    .language-switch a[aria-current="page"] { opacity:1; border-bottom:1px solid currentColor; }
+    .language-switch a:hover { opacity:1; }
+    .language-switch a:focus-visible { outline:2px solid #445141; outline-offset:3px; }
+    @media(min-width:768px) and (max-width:1199px) { #mainHeader nav:not(.language-switch) { gap:12px; font-size:11px; } #mainHeader nav:not(.language-switch) > * { margin-left:0; } }
+    @media(max-width:420px) { #mainHeader > div:first-child { padding-left:16px; padding-right:16px; } #mainHeader a > span:first-child { font-size:21px; } #mainHeader a > span:nth-child(2) { font-size:8px; letter-spacing:.15em; } .language-switch { margin-left:auto; margin-right:8px; } }
+  </style>
+  <link rel="alternate" hreflang="ru" href="https://gennadijvaliev02-design.github.io/gemini/">
+  <link rel="alternate" hreflang="en" href="https://gennadijvaliev02-design.github.io/gemini/en.html">
 </head>
 <body class="bg-cream-100 text-charcoal-800 font-sans antialiased selection:bg-sage-200 selection:text-sage-900 overflow-x-hidden">
 
@@ -118,7 +129,12 @@
         </button>
       </div>
 
-      <!-- Mobile Menu Toggle Button -->
+<nav class="language-switch" aria-label="Язык">
+        <a href="index.html" lang="ru" hreflang="ru" aria-current="page">RU</a>
+        <span aria-hidden="true">/</span>
+        <a href="en.html" lang="en" hreflang="en">EN</a>
+      </nav>
+            <!-- Mobile Menu Toggle Button -->
       <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-charcoal-800 focus:outline-none" aria-label="Открыть меню">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="burgerIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
@@ -965,3 +981,4 @@
   <script src="assets/js/app.js"></script>
 </body>
 </html>
+
